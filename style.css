@@ -1,0 +1,84 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*/
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right,#8360c3,#2ebf91);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-page{
+    width: 450px;
+    background: rgba(255, 255, 255, .3);
+    padding: 4rem;
+    border-radius: 20px;
+    position: relative;
+}
+
+.login-page img{
+    width: 100px ;
+}
+
+.login-page-logo,
+.login-page-header,
+.login-page-footer{
+    text-align: center;
+
+}
+
+.login-page a{
+    text-decoration: none;
+
+}
+
+.login-page a:hover{
+    text-decoration: underline;
+}
+
+.login-page-header{
+    margin-bottom: 2rem;
+}
+
+.login-page-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.login-page-form .form-item{
+    position: relative;
+}
+
+.login-page-form .form-item .form-item-icon{
+    position: absolute;
+    top: .82rem;
+    left: 1.4rem;
+    font-size: 1.3rem;
+    color: #747a81;
+}
+
+.login-page input[type="text"],
+.login-page input[type="password"]{
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, .3);
+    padding: 1rem 1.5rem;
+    padding-left: calc(1rem*3.5);
+    border-radius: 100px;
+    width: 100%;
+}
+
+.login-page input[type="text"]:valid,
+.login-page input[type="password"]:valid,
+.login-page input[type="text"],
+.login-page input[type="password"]{
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, .3);
+    padding: 1rem 1.5rem;
+    padding-left: calc(1rem*3.5);
+    border-radius: 100px;
+    width: 100%;
+}
