@@ -1,5 +1,6 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*/
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body{
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
@@ -18,7 +19,7 @@ body{
 }
 
 .login-page img{
-    width: 100px ;
+    width: 400px ;
 }
 
 .login-page-logo,
@@ -59,6 +60,37 @@ body{
     color: #747a81;
 }
 
+.login-page-form .form-item .label{
+    position: absolute;
+    left: 50px;
+    top: 14px;
+    pointer-events: none;
+    font-size: 14px;
+    color: #747a81;
+    transition: .5s;
+}
+
+.login-page-form .checkbox{
+    display: flex;
+    align-items: center;
+    gap:7px;
+}
+
+
+
+.login-page-form .form-item-other{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(1rem*0.8);
+    margin-bottom: .5rem;
+}
+
+.login-page-footer{
+    margin-top: 1.5rem;
+    font-size: calc(1rem*0.8);
+}
+
 .login-page input[type="text"],
 .login-page input[type="password"]{
     border: none;
@@ -72,13 +104,79 @@ body{
 
 .login-page input[type="text"]:valid,
 .login-page input[type="password"]:valid,
-.login-page input[type="text"],
-.login-page input[type="password"]{
+.login-page input[type="text"]:focus,
+.login-page input[type="password"]:focus{
+    background: rgba(255, 255, 255, .7);
+}
+
+.login-page input[type="text"]:valid ~ .label,
+.login-page input[type="password"]:valid ~ .label,
+.login-page input[type="text"]:focus ~ .label,
+.login-page input[type="password"]:focus ~ .label{
+    transform: translate(10px,-10px);
+    font-size: .8em;
+    margin-left: -2rem;
+    top: -8px;
+    color: black;
+}
+
+.login-page-form button{
+    background: linear-gradient(to left,#131e42,#1a2f10);
+    color: white;
     border: none;
-    outline: none;
-    background: rgba(255, 255, 255, .3);
-    padding: 1rem 1.5rem;
-    padding-left: calc(1rem*3.5);
+    padding: 1rem;
     border-radius: 100px;
-    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background .5s;
+}
+
+.login-page-form button:hover{
+    background: rgba(0, 0, 0, .7);
+    cursor: pointer;
+}
+
+.login-page-social{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.login-page-social > div{
+    opacity: .8;
+    letter-spacing: 1px;
+    font-size: calc(1rem*.8);
+}
+
+.login-page-social-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.login-page-social-btn a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, .7);
+    width: 50px;
+    border-radius: 100px;
+    height: 50px;
+    transition: all .5s;
+}
+
+.facebook-logo{
+    background:linear-gradient(to left,#0653e4,#1e7be6);
+}
+.instagram-logo{
+    background:linear-gradient(to left,#833ab4,#fd1d1d9e,#fcb045);
+}
+.twitter-logo{
+    background:linear-gradient(to left,#00aae4,#51d1f6);
+}
+
+.login-page-social-btn a:hover{
+    transform: scale(1.1);
 }
