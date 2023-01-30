@@ -132,7 +132,9 @@ body{
 }
 
 .login-page-form button:hover{
-    background: rgba(0, 0, 0, .7);
+    transform: scale(1.05);
+    background: linear-gradient(to left,#1a2f10,#131e42);
+    transition: 1s;
     cursor: pointer;
 }
 
